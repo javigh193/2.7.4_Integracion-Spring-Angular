@@ -1,0 +1,39 @@
+body {
+    min-height: 100vh;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+.fit-content {
+    width: fit-content;
+}
+
+.ng-valid:not(form).ng-touched {
+    border-left: 5px solid #42A948;
+}
+
+.ng-invalid:not(form).ng-touched {
+    border-left: 5px solid #a94442;
+}
+
+
+.bg-cover-nr {
+    background-repeat: no-repeat;
+    background-image: url(assets/images/barcos.jpg);
+    background-size: cover;
+}
+
+.bg-info-soft {
+    background-color: rgba(88, 124, 161);
+}
+
+.bg-info-softer {
+    background-color: rgba(200, 212, 224);
+}
+
+.pye-2 {
+    min-height: 2vh;
+}

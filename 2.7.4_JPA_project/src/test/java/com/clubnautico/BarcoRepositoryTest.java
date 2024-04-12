@@ -53,27 +53,6 @@ class BarcoRepositoryTest {
 		barco.setPropietario(socio);
 		barco = barcoRepository.save(barco);
 	}
-	
-//	@Test
-//	@Order(1)
-//	void testSave() {
-//		Amarre amarre = new Amarre(1, 2000.00);
-//		amarre = amarreRepository.save(amarre);
-//		Socio socio = new Socio();
-//		socio.setNombre("Juán");
-//		socio.setApellido("López");
-//		socio.setDni("123456A");
-//		socio.setNumeroSocio(123456);
-//		socio = socioRepository.save(socio);
-//		Barco barco = new Barco();
-//		barco.setNombre("Bella Vista");
-//		barco.setMatricula(123456);
-//		barco.setAmarre(amarre);
-//		barco.setPropietario(socio);
-//		Barco expected = barcoRepository.save(barco);
-//		Barco actual = barcoRepository.findById(barco.getId()).get(); 
-//		assertEquals(expected, actual); 
-//	}
 		
 	@Test
 	@Order(1)

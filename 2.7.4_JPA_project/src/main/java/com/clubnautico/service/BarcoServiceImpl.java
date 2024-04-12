@@ -18,6 +18,8 @@ import com.clubnautico.repository.BarcoRepository;
 import com.clubnautico.repository.BaseRepository;
 import com.clubnautico.repository.SocioRepository;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class BarcoServiceImpl implements BarcoService {
 	
@@ -34,6 +36,7 @@ public class BarcoServiceImpl implements BarcoService {
 	private BarcoConverter barcoConverter;
 	
 	@Override
+	@Transactional
 	public BarcoDTO save(BarcoDTO dto) throws Exception {
 		Optional<Socio> optSocio = socioRepository.findById(dto.getPropietarioId());
 		Optional<Amarre> optAmarre = amarreRepository.findById(dto.getAmarreId());
@@ -49,6 +52,7 @@ public class BarcoServiceImpl implements BarcoService {
 	}
 
 	@Override
+	@Transactional
 	public List<BarcoDTO> findAll() throws Exception {
 		try {
 			List<Barco> barcos = barcoRepository.findAll();
@@ -64,6 +68,7 @@ public class BarcoServiceImpl implements BarcoService {
 	}
 
 	@Override
+	@Transactional
 	public BarcoDTO findById(Long id) throws Exception {
 		Optional<Barco> optBarco = barcoRepository.findById(id);
 		if (optBarco.isPresent()) {
@@ -74,6 +79,7 @@ public class BarcoServiceImpl implements BarcoService {
 	}
 
 	@Override
+	@Transactional
 	public BarcoDTO update(Long id, BarcoDTO dto) throws Exception {
 		Optional<Barco> optBarco = barcoRepository.findById(id);
 		if (optBarco.isPresent()) {
