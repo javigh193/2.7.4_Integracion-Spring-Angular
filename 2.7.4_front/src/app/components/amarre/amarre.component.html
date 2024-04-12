@@ -1,0 +1,29 @@
+<div class="container border rounded p-2 bg-info-softer">
+    @if (errorMessage) {
+        <div class="container col-lg-5 col-10 d-flex flex-column justify-contents-center align-items-center fw-bold mt-3">
+            <div class="p-2 my-2 w-100 bg-danger ">
+                <p>{{ errorMessage }}</p>
+            </div>
+        </div>
+    } @else {
+        <h4 class="ms-2">Amarres</h4>
+        <table class="table table-striped border">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>número</th>
+                    <th>cuota</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (amarre of amarres; track amarre.id) {
+                    <tr>
+                        <td>{{ amarre.id }}</td>
+                        <td>{{ amarre.numero }}</td>
+                        <td>{{ amarre.cuota }}</td>
+                    </tr>            
+                }
+            </tbody>
+        </table>
+    }
+</div>
