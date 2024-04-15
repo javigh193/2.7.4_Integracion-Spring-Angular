@@ -44,6 +44,6 @@ public class Barco extends Base{
 	
 	@JsonIgnore
 	@OneToMany(mappedBy="barco", cascade=CascadeType.ALL, orphanRemoval=true)
-	List<Salidabarco> salidasBarco;
+	private List<Salidabarco> salidasBarco;
   
 }
