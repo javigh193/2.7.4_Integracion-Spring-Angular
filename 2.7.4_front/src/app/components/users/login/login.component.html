@@ -3,12 +3,12 @@
         <form [formGroup]="loginForm">
             <p class="text-danger">{{loginError}}</p>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Dirección de correo</label>
+                <label for="exampleInputEmail1" class="form-label">Nombre de usuario</label>
                 <input formControlName="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 @if (username.invalid && (username.dirty || username.touched)) {
                     <div class="text-danger">
                         @if (username.errors?.['required']) {
-                            <div>Se requiere un username.</div>
+                            <div>Se requiere un nombre de usuario.</div>
                         }
                         @if (username.errors?.['username']) {
                             <div>Formato no válido.</div>
@@ -34,6 +34,7 @@
                     <label class="form-check-label" for="exampleCheck1">Mantenerse conectado</label>
                 </div>
                 <button type="submit" class="btn btn-primary fit-content" (click)="login()">Iniciar sesión</button>
+                <a class="pt-2" routerLink="/registro">Registrarse</a>
             </div>
         </form>
     </div>

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MessagesService } from '../../../services/messages.service';
 import { AmarreComponent } from '../../amarre/amarre.component';
@@ -10,14 +10,14 @@ import { AmarreComponent } from '../../amarre/amarre.component';
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
-export class DashboardComponent implements OnInit, OnDestroy {
+export class DashboardComponent implements OnDestroy {
 
   loggedInUser: any = sessionStorage.getItem('username');
 
   constructor(private messagesService:MessagesService) {}
 
-  ngOnInit(): void {
-  }
+  /*ngOnInit(): void {
+  }*/
 
   ngOnDestroy(): void {
     this.messagesService.clearMessages();

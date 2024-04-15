@@ -22,7 +22,8 @@ export const authGuard: CanActivateFn = (route, state) => {
   if (isAuthenticated) {
     return true;
   } else {
-    messagesService.sendMessage('Por favor, inicie sesión para poder acceder a su Dashboard.')
+    messagesService.clearMessages();
+    messagesService.sendMessage('Por favor, inicie sesión para poder acceder a su Dashboard.');
     return router.parseUrl('/iniciar-sesion');
   }
 

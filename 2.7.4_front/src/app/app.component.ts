@@ -7,12 +7,13 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './components/users/dashboard/dashboard.component';
 import { MessagesComponent } from './components/shared/messages/messages.component';
+import { RegisterComponent } from './components/users/register/register/register.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HttpClientModule, HeaderComponent, FooterComponent, NavbarComponent, DashboardComponent, MessagesComponent],
+  imports: [CommonModule, RouterOutlet, HttpClientModule, HeaderComponent, FooterComponent, NavbarComponent, DashboardComponent, MessagesComponent, RegisterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
